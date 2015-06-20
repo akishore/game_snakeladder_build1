@@ -32,11 +32,11 @@ img, embed, object, video {
 	text-align: center;
 }
 .player2 {
-	padding-top:170px;
+	padding-top:120px;
 }
 .player4 {
 	padding-bottom: 80px;
-	padding-top:80px;
+	padding-top:60px;
 }
 
 .spacer {
@@ -51,8 +51,8 @@ img, embed, object, video {
 	height: 720px;
 }
 #canvasContainer {
-	width:720px;
-	height:720px;
+	width:600px;
+	height:600px;
 	float: left;
 }
 #myCanvas{

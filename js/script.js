@@ -26,8 +26,8 @@ var speed;
 var activeCoin;
 var ac;
 
-var cellSize = 60;
-var topBorderOfBoard = 60;
+var cellSize = 50;
+var topBorderOfBoard = 50;
 var homeLocationXCoordinate = 0.3*cellSize; //3rd quadrant radius + cellSize/10
 var homeLocationYCoordinate = 0.7*cellSize + topBorderOfBoard; //3rd quadrant
 var lineStartPoint = 1.3 * cellSize; //cellSize + 0.3*cellSize;
