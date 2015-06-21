@@ -15,7 +15,7 @@ var playerNumInit = function(){
 	if (queryString["playerNum"]!=null){
 		var playerNum = queryString["playerNum"];
 		return playerNum;
-	}
+	}	
 }
 
 var p1Coin;
@@ -26,8 +26,8 @@ var speed;
 var activeCoin;
 var ac;
 
-var cellSize = 50;
-var topBorderOfBoard = 50;
+var cellSize = 60;
+var topBorderOfBoard = 60;
 var homeLocationXCoordinate = 0.3*cellSize; //3rd quadrant radius + cellSize/10
 var homeLocationYCoordinate = 0.7*cellSize + topBorderOfBoard; //3rd quadrant
 var lineStartPoint = 1.3 * cellSize; //cellSize + 0.3*cellSize;
@@ -98,9 +98,6 @@ var teleport = [
 		 {startPoint:98,endPoint:13,xCoordinate:(8.3 * cellSize),yCoordinate:(1.7*cellSize)+topBorderOfBoard,line:2,message:"You move from 98 to 13"}
 	];
 
-	var statusMessage = function() {
-		alert("Player" + activePlayer + "wins");
-	}
 	var incrementPlayer = function() {
 		if (playerNum > 1){
 			if(activePlayer === (playerNum-1))
@@ -234,6 +231,8 @@ var teleport = [
 			*/
 			createjs.Tween.get(window["coin" + (activePlayer + 1)], { loop: false })
 		    .to({ x: xCoordinate},100)
+			// document.getElementById("parentContainer").style.visibility.hidden = true;
+			// document.getElementById("parentContainer_gameOver").style.visibility.hidden = false;
 			var winMessage = "Player" + [activePlayer + 1] + " wins"
 			var container = new createjs.Container(); 
 			var textFontSize = 40;
@@ -370,6 +369,8 @@ var teleport = [
 			createjs.Tween.get(window["coin" + (activePlayer + 1)], { loop: false })
 		    .to({ x: lineStartPoint}, 1000)
 			.call(incrementPlayer());
+			
+			
 			 
 		 }
 		if (winStatus === -1){
@@ -425,6 +426,9 @@ var teleport = [
 	];
 	var ran;
 	var playerNum = playerNumInit();
+	// document.getElementById("parentContainer_gameOver").style.visibility.hidden = true;
+	// document.getElementById("parentContainer").style.visibility.hidden = false;
+
 	
 	if (playerNum === "1"){
 		document.getElementById("controlPlayer3").style.visibility = "hidden";

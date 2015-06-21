@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<title>Snakes and Ladder Game</title>
-		<meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1, width=screen.width, height=screen.height, target-densitydpi=device-dpi" />
+		<meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width height=device-height, target-densitydpi=device-dpi" />
 		<script src="js/jquery-1.11.2.min.js"></script>
 		<script src="js/easeljs-0.8.0.min.js"></script>
 		<script src="js/tweenjs-0.6.0.min.js"></script>
@@ -22,15 +22,6 @@
 	<!--	<div id="topBar" class="bar">
 		Welcome to 21st Century Snake & Ladder
 		</div> -->
-		<div class="spacer">
-			<!-- <div id="turnInfo"></div> -->
-			
-			<!-- <span id="activePlayerHTML"> </span> -->
-			<!-- <span id="xcoordinate"></span> -->
-			<!-- <span id="ycoordinate"></span> -->
-			<!-- <span id="linenumber"></span> -->
-			<!-- <span id="diceImage"></span> -->
-		</div>
 		<div id="parentContainer">
 			<div id="leftCol">
 				<div id="controlPlayer1" class="player4">
@@ -46,7 +37,7 @@
 			</div>
 			
 			<div id="canvasContainer">
-				<canvas id="myCanvas" width="600px" height="600px">
+				<canvas id="myCanvas" width="720px" height="720px">
 				Your browser does not support the HTML5 canvas tag.</canvas>
 			</div>
 			
@@ -64,6 +55,21 @@
 			
 			</div>	
 		</div>
+		<!-- 
+		<div id="parentContainer_gameOver" >
+			<div id="playerSelector">
+				<span id="selectorHeader"> Select Number of Players </span><br />
+				<input type="button" name="One Player" id="OnePlayer" class="circleButton" alt="Number1" value="1"  data-anijs="if: mouseover, do: jello animated">
+				<input type="button" name="Two Players" id="TwoPlayers" class="circleButton" alt="Number2" value="2"  data-anijs="if:mouseover, do: jello animated">
+				<input type="button" name="Three Players" id="ThreePlayers" class="circleButton" alt="Number3" value="3"  data-anijs="if: mouseover, do: jello animated">
+				<input type="button" name="Four Players" id="FourPlayers" class="circleButton" alt="Number4" value="4"  data-anijs="if: mouseover, do: jello animated">
+				<div id="selectorFooter"> 
+				<img src="images/dice_1.gif">
+				<img src="images/dice_2.gif">
+				<img src="images/dice_3.gif">
+				<img src="images/dice_4.gif"></div>
+			</div>
+		</div> -->
 	<!--	<div class="spacer">
 		</div>
 		<div id="bottomBar" class="bar">

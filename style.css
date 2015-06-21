@@ -8,7 +8,8 @@ body{
     margin: 0;
     padding: 0;
 	font-family: 'Lato', verdana, sans-serif;
-	background:url(images/bg8.png);
+	
+	background:url(images/bg7.png);
 }
 img, embed, object, video {
 	max-width:100%;
@@ -17,12 +18,24 @@ img, embed, object, video {
 #wrapper {
 	height: auto;
 	position:relative;
+	
+}
+#wrapperIndex {
+	height: 100%;
+	position:relative;
+	background:url(images/bg8.png);
 }
 #parentContainer {
 	margin-left:auto;
 	margin-right:auto;
-	width: 920px;
+	width: 1120px;
 }
+/* 
+#parentContainer_gameOver{
+	margin-left:auto;
+	margin-right:auto;
+	width: 920px;
+} */
 .playerName {
 	font-family: 'Audiowide', cursive;
 	font-size: 16px;
@@ -51,20 +64,20 @@ img, embed, object, video {
 	height: 720px;
 }
 #canvasContainer {
-	width:600px;
-	height:600px;
+	width:720px;
+	height:720px;
 	float: left;
 }
 #myCanvas{
-	background:url(images/board_2.png);
+	background:url(images/board_720.png);
 	background-repeat: no-repeat;
 	/*border:0px solid #d3d3d3; */
 }
 input#dicePlayer1    {
 	background:url(images/dice_1.png);
 	background-repeat: no-repeat;
-	height: 144px;
-	width:100px;
+	height: 180px;
+	width:180px;
 	border: 0;
 	cursor:pointer;
 }
@@ -81,8 +94,8 @@ input#dicePlayer1:disabled    {
 input#dicePlayer2    {
 	background:url(images/dice_2.png);
 	background-repeat: no-repeat;
-	height: 144px;
-	width:100px;
+height: 180px;
+	width:180px;
 	border: 0;
 	cursor:pointer;
 }
@@ -100,8 +113,8 @@ input#dicePlayer2:disabled    {
 input#dicePlayer3    {
 	background:url(images/dice_3.png);
 	background-repeat: no-repeat;
-	height: 144px;
-	width:100px;
+	height: 180px;
+	width:180px;
 	border: 0;
 	cursor:pointer;
 }
@@ -118,8 +131,8 @@ input#dicePlayer3:disabled    {
 input#dicePlayer4    {
 	background:url(images/dice_4.png);
 	background-repeat: no-repeat;
-	height: 144px;
-	width:100px;
+	height: 180px;
+	width:180px;
 	border: 0;
 	cursor:pointer;
 }
@@ -137,13 +150,13 @@ input#dicePlayer4:disabled    {
 
 }
 #playerSelector {
-	height: 720px;
-	width: 720px;
+	height: 670px;
+	width: 920px;
 	background:url(images/bg3.png);
     border: 20px solid transparent;
-	-webkit-border-image: url(images/bg7.png) 1 round; /* Safari 3.1-5 */
-    -o-border-image: url(images/bg7.png) 1 round; /* Opera 11-12.1 */
-    border-image: url(images/bg7.png) 1 round;
+	-webkit-border-image: url(images/bg7.png)) 15 round; /* Safari 3.1-5 */
+    -o-border-image: url(images/bg7.png)) 15 round; /* Opera 11-12.1 */
+    border-image: url(images/bg7.png) 15 round;
 	margin-left:auto;
 	margin-right:auto;
 	padding: 0px 40px 0px 0px;
@@ -158,7 +171,7 @@ input#dicePlayer4:disabled    {
 	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
 	background-color: #f0e781;
 	font-family: "raleway", verdana, sans-serif;
-	margin-left:40px;
+	margin-left:80px;
 	float: left;
 	font-size: 40px;
 	font-weight:1600;
@@ -170,8 +183,8 @@ input#dicePlayer4:disabled    {
 	display: inline-block;
 	font-size:32px;
 	letter-spacing:6px;
-	padding-left: 110px;
-	margin-top: 150px;
+	padding-left: 200px;
+	margin-top: 100px;
 	font-family: "raleway", verdana, sans-serif;
 	padding-bottom:20px;
 	color:#fff;
@@ -185,6 +198,7 @@ input#dicePlayer4:disabled    {
 
 #selectorFooter img{
 	width:175px;
+	padding-left: 50px;
 	display:inline;
 }
 
