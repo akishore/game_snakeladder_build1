@@ -223,15 +223,15 @@ var teleport = [
 		}
 		else if (endLocation === 100){
 			winStatus = 1;
+			//temperory visibile lines
+			window.document.location.href = "endGame.html?num=" + playerNum + "&winId=" + (activePlayer+1);
+			/* document.getElementById("leftCol").style.visibility = "hidden";
+			document.getElementById("rightCol").style.visibility = "hidden";
+			document.getElementById("canvasContainer").style.visibility = "hidden";
+			document.getElementById("restartOptions").style.visibility = "visible";
+			$('#parentContainer').toggleClass('newGame');*/
+			//end temperory
 			player[activePlayer].currentLocation = player[activePlayer].currentLocation + steps;
-			/*
-			if (playerNum === "1" && activePlayer === 1){
-				document.getElementById(elementId+"Location").innerHTML = "Computer Location "+ endLocation;
-			}
-			else{
-				document.getElementById(elementId+"Location").innerHTML = "Player " + (activePlayer + 1) + "Location "+ endLocation;
-			}
-			*/
 			createjs.Tween.get(window["coin" + (activePlayer + 1)], { loop: false })
 		    .to({ x: xCoordinate},100)
 			var winMessage = "Player" + [activePlayer + 1] + " wins"
@@ -241,7 +241,7 @@ var teleport = [
 			container.addChild(text); 
 			container.x = (720/3); 
 			container.y = (720/2) - textFontSize; 
-			container.name = canvasMessage; 
+			// container.name = canvasMessage; 
 			container.shadow = new createjs.Shadow("#000000", 5, 5, 10);
 			stage.addChild(container); 
 			stage.update();
@@ -370,7 +370,8 @@ var teleport = [
 			createjs.Tween.get(window["coin" + (activePlayer + 1)], { loop: false })
 		    .to({ x: lineStartPoint}, 1000)
 			.call(incrementPlayer());
-			 
+			document.getElementById("parentContainer").style.visibility = "hidden";
+			//document.getElementById("parentContainer_newGame").style.visibility = "visible";
 		 }
 		if (winStatus === -1){
 			incrementPlayer();
@@ -425,7 +426,7 @@ var teleport = [
 	];
 	var ran;
 	var playerNum = playerNumInit();
-	
+	//document.getElementById("restartOptions").style.visibility = "hidden";
 	if (playerNum === "1"){
 		document.getElementById("controlPlayer3").style.visibility = "hidden";
 		document.getElementById("controlPlayer4").style.visibility = "hidden";
