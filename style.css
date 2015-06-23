@@ -23,6 +23,7 @@ img, embed, object, video {
 	margin-right:auto;
 	width: 920px;
 }
+
 .playerName {
 	font-family: 'Audiowide', cursive;
 	font-size: 16px;
@@ -44,15 +45,12 @@ img, embed, object, video {
 }
 #leftCol {
 	float: left;
-	height: 720px;
 }
 #rightCol {
 	float: left;
-	height: 720px;
 }
 #canvasContainer {
 	width:720px;
-	height:720px;
 	float: left;
 }
 #myCanvas{
@@ -188,46 +186,169 @@ input#dicePlayer4:disabled    {
 	display:inline;
 }
 
-/*
-#boardbg {
-	float:left;
-	height:100vh;
-}
-#boardbg img{
-	height:100vh;
-} */
-/*
-.rightElement {
-	margin: 10px 0px 10px 0px;
+.winAnimation {	
+	-webkit-animation-name: bounce;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 1.2s;
+
+  animation-name: bounce;
+  animation-iteration-count: infinite;
+  animation-duration: 1.2s;
 }
 
-.bar {
-	width: 100%;
-	padding: 16px 0 16px 0;
-	text-align: center;	
-	background:url(images/bg7.png);
-	background-color: #26354c;
-	color: #ffffff;
-	font-family: 'Raleway', sans-serif;	
+/*.loseAnimation{
+	-webkit-animation-name: spin;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 1.2s;
+  -webkit-animation-direction: alternate;
+
+  animation-name: spin;
+  animation-iteration-count: infinite;
+  animation-duration: 1.2s;
+  animation-direction: alternate;
+}*/
+
+@-webkit-keyframes bounce {
+  from, to  {
+    bottom: 0;
+    -webkit-animation-timing-function: ease-out;
+  }
+  50% {
+    bottom: 220px;
+    -webkit-animation-timing-function: ease-in;
+  }
 }
 
-#topBar {	
-	font-size: 20px;
+/*@-webkit-keyframes spin {
+  from { 									}
+  to   { -webkit-transform: rotateZ(30deg); }
+}*/
+
+@keyframes bounce {
+  from, to  {
+    bottom: 0;
+    animation-timing-function: ease-out;
+  }
+  50% {
+    bottom: 220px;
+    animation-timing-function: ease-in;
+  }
 }
-#bottomBar {
-	font-size: 16px;
-	position: relative;
-	margin-top: -150px;  
-	height: 150px;
-	clear:both;
-}
-*/
-/*
-input#rollButton    {
-	background:url(images/roll_button_normal.jpg);
-	background-repeat: no-repeat;
-	width:200px;
-	height:100px;
-	border: 0;
-}
-*/
+
+/*@keyframes spin {
+  from {
+    -moz-transform: rotate(-30);
+    -o-transform: rotate(-30);
+    -ms-transform: rotate(-30);
+    transform: rotate(-30);
+  }
+  to {
+    -moz-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    transform: rotate(30deg);
+  }
+}*/
+
+/*@-o-keyframes bounce {
+  0% {
+	-o-transform:translateY(-100%);
+    opacity: 0;
+  }
+  5% {
+  	-o-transform:translateY(-100%);
+    opacity: 0;
+  }
+  15% {
+  	-o-transform:translateY(0);
+    padding-bottom: 5px;
+  }
+  30% {
+  	-o-transform:translateY(-50%);
+  }
+  40% {
+  	-o-transform:translateY(0%);
+    padding-bottom: 6px;
+  }
+  50% {
+  	-o-transform:translateY(-30%);
+  }
+  70% {
+  	-o-transform:translateY(0%);
+    padding-bottom: 7px;
+  }
+  80% {
+  	-o-transform:translateY(-15%);
+  }
+  90% {
+  	-o-transform:translateY(0%);
+  	padding-bottom: 8px;
+  }
+  95% {
+  	-o-transform:translateY(-10%);
+  }
+  97% {
+  	-o-transform:translateY(0%);
+  	padding-bottom: 9px;
+  }
+  99% {
+  	-o-transform:translateY(-5%);
+  }
+  100% {
+  	-o-transform:translateY(0);
+  	padding-bottom: 9px;
+    opacity: 1;
+  }
+}*/
+
+/* W3, Opera 12+, Firefox 16+ */
+/*@keyframes bounce {
+  0% {
+	transform:translateY(-100%);
+    opacity: 0;
+  }
+  5% {
+  	transform:translateY(-100%);
+    opacity: 0;
+  }
+  15% {
+  	transform:translateY(0);
+    padding-bottom: 5px;
+  }
+  30% {
+  	transform:translateY(-50%);
+  }
+  40% {
+  	transform:translateY(0%);
+    padding-bottom: 6px;
+  }
+  50% {
+  	transform:translateY(-30%);
+  }
+  70% {
+  	transform:translateY(0%);
+    padding-bottom: 7px;
+  }
+  80% {
+  	transform:translateY(-15%);
+  }
+  90% {
+  	transform:translateY(0%);
+  	padding-bottom: 8px;
+  }
+  95% {
+  	transform:translateY(-7%);
+  }
+  97% {
+  	transform:translateY(0%);
+  	padding-bottom: 9px;
+  }
+  99% {
+  	transform:translateY(-3%);
+  }
+  100% {
+  	transform:translateY(0);
+  	padding-bottom: 9px;
+    opacity: 1;
+  }
+}*/
